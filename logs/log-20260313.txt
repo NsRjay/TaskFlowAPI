@@ -1,0 +1,225 @@
+2026-03-13 14:45:08.233 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 14:45:08.485 +05:30 [INF] Now listening on: http://localhost:5277
+2026-03-13 14:45:08.491 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 14:45:08.493 +05:30 [INF] Hosting environment: Development
+2026-03-13 14:45:08.494 +05:30 [INF] Content root path: D:\Rohith\dotNetCore Projects\TaskFlow\TaskFlowAPI
+2026-03-13 14:46:46.059 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/index.html - null null
+2026-03-13 14:46:46.241 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/index.html - 200 null text/html;charset=utf-8 187.9889ms
+2026-03-13 14:46:46.397 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - null null
+2026-03-13 14:46:46.570 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 174.2167ms
+2026-03-13 14:46:58.717 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/register - application/json 45
+2026-03-13 14:46:58.781 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-13 14:46:58.789 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 14:46:58.820 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(TaskFlowAPI.DTOs.RegisterDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 14:46:59.106 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-03-13 14:46:59.151 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI) in 322.4872ms
+2026-03-13 14:46:59.154 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 14:46:59.158 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/register - 400 null application/problem+json; charset=utf-8 441.2462ms
+2026-03-13 14:47:09.875 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/register - application/json 48
+2026-03-13 14:47:09.889 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 14:47:09.890 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(TaskFlowAPI.DTOs.RegisterDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 14:47:11.420 +05:30 [INF] Executed DbCommand (88ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__dto_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-03-13 14:47:12.180 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedAt], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-13 14:47:12.202 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-03-13 14:47:12.204 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI) in 2311.3992ms
+2026-03-13 14:47:12.205 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 14:47:12.225 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/register - 200 null text/plain; charset=utf-8 2349.9479ms
+2026-03-13 15:19:53.953 +05:30 [INF] Application is shutting down...
+2026-03-13 15:20:15.556 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 15:20:15.804 +05:30 [INF] Now listening on: http://localhost:5277
+2026-03-13 15:20:15.809 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 15:20:15.810 +05:30 [INF] Hosting environment: Development
+2026-03-13 15:20:15.812 +05:30 [INF] Content root path: D:\Rohith\dotNetCore Projects\TaskFlow\TaskFlowAPI
+2026-03-13 15:20:23.665 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/index.html - null null
+2026-03-13 15:20:23.815 +05:30 [INF] Handled GET /swagger/index.html responded 200 in 123.0092 ms
+2026-03-13 15:20:23.857 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/index.html - 200 null text/html;charset=utf-8 193.2985ms
+2026-03-13 15:20:23.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - null null
+2026-03-13 15:20:24.150 +05:30 [INF] Handled GET /swagger/v1/swagger.json responded 200 in 193.5719 ms
+2026-03-13 15:20:24.153 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 202.6903ms
+2026-03-13 15:20:47.277 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/register - application/json 51
+2026-03-13 15:20:47.326 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-13 15:20:47.332 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 15:20:47.353 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(TaskFlowAPI.DTOs.RegisterDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 15:20:48.759 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__dto_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-03-13 15:20:49.542 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedAt], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-13 15:20:49.573 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-03-13 15:20:49.579 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI) in 2219.325ms
+2026-03-13 15:20:49.580 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 15:20:49.582 +05:30 [INF] Handled POST /api/Auth/register responded 200 in 2297.4886 ms
+2026-03-13 15:20:49.594 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/register - 200 null text/plain; charset=utf-8 2316.2219ms
+2026-03-13 15:30:43.041 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/login - application/json 47
+2026-03-13 15:30:43.060 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 15:30:43.064 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(TaskFlowAPI.DTOs.LoginDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 15:30:43.282 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+2026-03-13 15:30:43.805 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-13 15:30:43.813 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI) in 747.2898ms
+2026-03-13 15:30:43.815 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 15:30:43.816 +05:30 [INF] Handled POST /api/Auth/login responded 200 in 770.2180 ms
+2026-03-13 15:30:43.819 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/login - 200 null application/json; charset=utf-8 777.5435ms
+2026-03-13 15:31:03.018 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/api/Tasks?page=1&pageSize=5 - null null
+2026-03-13 15:31:03.091 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI)'
+2026-03-13 15:31:03.094 +05:30 [INF] Route matched with {action = "GetTasks", controller = "Tasks"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTasks(Int32, Int32) on controller TaskFlowAPI.Controllers.TasksController (TaskFlowAPI).
+2026-03-13 15:31:03.186 +05:30 [INF] Fetching tasks from database. Page: 1, PageSize: 5
+2026-03-13 15:31:03.305 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Tasks] AS [t]
+2026-03-13 15:31:03.312 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-03-13 15:31:03.314 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-03-13 15:31:03.325 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[IsCompleted], [t].[Title]
+FROM [Tasks] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-03-13 15:31:03.344 +05:30 [INF] Executing OkObjectResult, writing value of type 'TaskFlowAPI.Helpers.PagedResult`1[[TaskFlowAPI.DTOs.TaskResponseDTO, TaskFlowAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-13 15:31:03.359 +05:30 [INF] Executed action TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI) in 263.8711ms
+2026-03-13 15:31:03.361 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI)'
+2026-03-13 15:31:03.363 +05:30 [INF] Handled GET /api/Tasks responded 200 in 328.8683 ms
+2026-03-13 15:31:03.367 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/api/Tasks?page=1&pageSize=5 - 200 null application/json; charset=utf-8 348.7898ms
+2026-03-13 15:33:14.746 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Tasks - application/json 52
+2026-03-13 15:33:14.756 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.TasksController.CreateTask (TaskFlowAPI)'
+2026-03-13 15:33:14.759 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Tasks"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateTask(TaskFlowAPI.DTOs.TaskCreateDTO) on controller TaskFlowAPI.Controllers.TasksController (TaskFlowAPI).
+2026-03-13 15:33:14.767 +05:30 [INF] Create task request received
+2026-03-13 15:33:14.795 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-13 15:33:14.800 +05:30 [INF] Executing OkObjectResult, writing value of type 'TaskFlowAPI.DTOs.TaskResponseDTO'.
+2026-03-13 15:33:14.804 +05:30 [INF] Executed action TaskFlowAPI.Controllers.TasksController.CreateTask (TaskFlowAPI) in 43.0952ms
+2026-03-13 15:33:14.805 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.TasksController.CreateTask (TaskFlowAPI)'
+2026-03-13 15:33:14.807 +05:30 [INF] Handled POST /api/Tasks responded 200 in 56.9434 ms
+2026-03-13 15:33:14.808 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Tasks - 200 null application/json; charset=utf-8 62.8901ms
+2026-03-13 15:45:10.249 +05:30 [INF] Application is shutting down...
+2026-03-13 16:13:58.419 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:13:58.674 +05:30 [INF] Now listening on: http://localhost:5277
+2026-03-13 16:13:58.679 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 16:13:58.681 +05:30 [INF] Hosting environment: Development
+2026-03-13 16:13:58.682 +05:30 [INF] Content root path: D:\Rohith\dotNetCore Projects\TaskFlow\TaskFlowAPI
+2026-03-13 16:14:03.645 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/index.html - null null
+2026-03-13 16:14:03.782 +05:30 [INF] Handled GET /swagger/index.html responded 200 in 96.8640 ms
+2026-03-13 16:14:03.810 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/index.html - 200 null text/html;charset=utf-8 166.0791ms
+2026-03-13 16:14:03.902 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - null null
+2026-03-13 16:14:04.052 +05:30 [INF] Handled GET /swagger/v1/swagger.json responded 200 in 144.4348 ms
+2026-03-13 16:14:04.055 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.5215ms
+2026-03-13 16:14:24.324 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/register - application/json 50
+2026-03-13 16:14:24.365 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-13 16:14:24.368 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 16:14:24.387 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(TaskFlowAPI.DTOs.RegisterDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 16:14:25.804 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__dto_Username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-03-13 16:14:26.560 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedAt], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-13 16:14:26.591 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-03-13 16:14:26.597 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI) in 2203.973ms
+2026-03-13 16:14:26.598 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Register (TaskFlowAPI)'
+2026-03-13 16:14:26.600 +05:30 [INF] Handled POST /api/Auth/register responded 200 in 2268.0872 ms
+2026-03-13 16:14:26.619 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/register - 200 null text/plain; charset=utf-8 2294.4608ms
+2026-03-13 16:14:47.278 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/login - application/json 50
+2026-03-13 16:14:47.287 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 16:14:47.307 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(TaskFlowAPI.DTOs.LoginDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 16:14:47.417 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+2026-03-13 16:14:48.019 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-13 16:14:48.034 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI) in 724.4764ms
+2026-03-13 16:14:48.037 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 16:14:48.038 +05:30 [INF] Handled POST /api/Auth/login responded 200 in 753.9094 ms
+2026-03-13 16:14:48.043 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/login - 200 null application/json; charset=utf-8 765.7116ms
+2026-03-13 16:15:27.114 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Tasks - application/json 63
+2026-03-13 16:15:27.177 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-03-13 16:15:27.184 +05:30 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-03-13 16:15:27.186 +05:30 [INF] Handled POST /api/Tasks responded 403 in 65.9671 ms
+2026-03-13 16:15:27.189 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Tasks - 403 0 null 74.791ms
+2026-03-13 16:16:09.965 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/login - application/json 47
+2026-03-13 16:16:09.969 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 16:16:09.971 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(TaskFlowAPI.DTOs.LoginDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 16:16:10.063 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+2026-03-13 16:16:10.273 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-13 16:16:10.276 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI) in 301.377ms
+2026-03-13 16:16:10.277 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 16:16:10.279 +05:30 [INF] Handled POST /api/Auth/login responded 200 in 310.2841 ms
+2026-03-13 16:16:10.281 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/login - 200 null application/json; charset=utf-8 316.3881ms
+2026-03-13 16:16:28.219 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Tasks - application/json 63
+2026-03-13 16:16:28.227 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.TasksController.CreateTask (TaskFlowAPI)'
+2026-03-13 16:16:28.230 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Tasks"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateTask(TaskFlowAPI.DTOs.TaskCreateDTO) on controller TaskFlowAPI.Controllers.TasksController (TaskFlowAPI).
+2026-03-13 16:16:28.323 +05:30 [INF] Create task request received
+2026-03-13 16:16:28.356 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-03-13 16:16:28.364 +05:30 [INF] Executing OkObjectResult, writing value of type 'TaskFlowAPI.DTOs.TaskResponseDTO'.
+2026-03-13 16:16:28.377 +05:30 [INF] Executed action TaskFlowAPI.Controllers.TasksController.CreateTask (TaskFlowAPI) in 139.3772ms
+2026-03-13 16:16:28.379 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.TasksController.CreateTask (TaskFlowAPI)'
+2026-03-13 16:16:28.381 +05:30 [INF] Handled POST /api/Tasks responded 200 in 158.2758 ms
+2026-03-13 16:16:28.384 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Tasks - 200 null application/json; charset=utf-8 165.8336ms
+2026-03-13 16:23:39.951 +05:30 [INF] Application is shutting down...
+2026-03-13 16:24:03.840 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-13 16:24:04.110 +05:30 [INF] Now listening on: http://localhost:5277
+2026-03-13 16:24:04.116 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-13 16:24:04.118 +05:30 [INF] Hosting environment: Development
+2026-03-13 16:24:04.119 +05:30 [INF] Content root path: D:\Rohith\dotNetCore Projects\TaskFlow\TaskFlowAPI
+2026-03-13 16:24:09.368 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/index.html - null null
+2026-03-13 16:24:09.558 +05:30 [INF] Handled GET /swagger/index.html responded 200 in 146.1472 ms
+2026-03-13 16:24:09.592 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/index.html - 200 null text/html;charset=utf-8 226.346ms
+2026-03-13 16:24:10.158 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - null null
+2026-03-13 16:24:10.338 +05:30 [INF] Handled GET /swagger/v1/swagger.json responded 200 in 170.2286 ms
+2026-03-13 16:24:10.342 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 190.6378ms
+2026-03-13 16:24:47.683 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/login - application/json 47
+2026-03-13 16:24:47.727 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-13 16:24:47.730 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 16:24:47.750 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(TaskFlowAPI.DTOs.LoginDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-13 16:24:49.213 +05:30 [INF] Executed DbCommand (54ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+2026-03-13 16:24:49.908 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-13 16:24:49.923 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI) in 2165.6171ms
+2026-03-13 16:24:49.925 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-13 16:24:49.926 +05:30 [INF] Handled POST /api/Auth/login responded 200 in 2236.2437 ms
+2026-03-13 16:24:49.939 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/login - 200 null application/json; charset=utf-8 2256.3119ms
+2026-03-13 16:25:14.510 +05:30 [INF] Application is shutting down...

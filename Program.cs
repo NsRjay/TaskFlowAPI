@@ -8,10 +8,23 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TaskFlowAPI.Helpers;
+using TaskFlowAPI.Mappings;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Serilog;
 
 
+Log.Logger=new LoggerConfiguration()
+.Enrich.FromLogContext()
+.MinimumLevel.Information()
+.WriteTo.Console(
+    outputTemplate:
+    "[{Timestamp:HH:mm:ss}{Level:u3}][CorrelationId:{CorrelationId}]{Message:lj}{NewLine}{Exception}"
+)
+.WriteTo.File("logs/log-.txt",rollingInterval: RollingInterval.Day)
+.CreateLogger();
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.UseSerilog();
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -45,6 +58,10 @@ builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(builde
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService,TaskService>();   
 builder.Services.AddScoped<JwtHelper>();
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
 var jwtSection = builder.Configuration.GetSection("JwtSettings");
 var jwtkey=jwtSection["Key"]?? throw new Exception("JWT Key not found in configuration");
 
@@ -79,6 +96,12 @@ builder.Services.AddAuthentication(options =>
 });
 builder.Services.AddControllers();
 var app = builder.Build();
+app.UseMiddleware<CorrelationIdMiddleware>();
+app.UseSerilogRequestLogging(options =>
+{
+    options.MessageTemplate =
+        "Handled {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms";
+});
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseMiddleware<ExceptionMiddleware>();
