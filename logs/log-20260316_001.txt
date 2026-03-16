@@ -1,0 +1,126 @@
+2026-03-16 16:20:25.270 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 16:20:25.654 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5277: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-16 16:21:11.550 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 16:21:11.800 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5277: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-03-16 17:14:09.914 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 17:14:10.235 +05:30 [INF] Now listening on: http://localhost:5277
+2026-03-16 17:14:10.243 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-16 17:14:10.245 +05:30 [INF] Hosting environment: Development
+2026-03-16 17:14:10.246 +05:30 [INF] Content root path: D:\Rohith\dotNetCore Projects\TaskFlow\TaskFlowAPI
+2026-03-16 17:14:55.711 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/index.html - null null
+2026-03-16 17:14:55.904 +05:30 [INF] Handled GET /swagger/index.html responded 200 in 140.2280 ms
+2026-03-16 17:14:55.947 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/index.html - 200 null text/html;charset=utf-8 237.543ms
+2026-03-16 17:14:56.047 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - null null
+2026-03-16 17:14:56.227 +05:30 [INF] Handled GET /swagger/v1/swagger.json responded 200 in 168.1480 ms
+2026-03-16 17:14:56.231 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 184.728ms
+2026-03-16 17:21:25.120 +05:30 [INF] Application is shutting down...
+2026-03-16 17:23:57.583 +05:30 [INF] User profile is available. Using 'C:\Users\BST - 1\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-16 17:23:57.911 +05:30 [INF] Now listening on: http://localhost:5277
+2026-03-16 17:23:58.277 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-16 17:23:58.302 +05:30 [INF] Hosting environment: Development
+2026-03-16 17:23:58.303 +05:30 [INF] Content root path: D:\Rohith\dotNetCore Projects\TaskFlow\TaskFlowAPI
+2026-03-16 17:24:06.232 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/index.html - null null
+2026-03-16 17:24:06.372 +05:30 [INF] Handled GET /swagger/index.html responded 200 in 104.2617 ms
+2026-03-16 17:24:06.410 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/index.html - 200 null text/html;charset=utf-8 178.7719ms
+2026-03-16 17:24:06.509 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - null null
+2026-03-16 17:24:06.672 +05:30 [INF] Handled GET /swagger/v1/swagger.json responded 200 in 157.8265 ms
+2026-03-16 17:24:06.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 166.9363ms
+2026-03-16 17:24:23.042 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5277/api/Auth/login - application/json 47
+2026-03-16 17:24:23.092 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-03-16 17:24:23.095 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-16 17:24:23.116 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(TaskFlowAPI.DTOs.LoginDTO) on controller TaskFlowAPI.Controllers.AuthController (TaskFlowAPI).
+2026-03-16 17:24:24.571 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__dto_Username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__dto_Username_0
+2026-03-16 17:24:25.219 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-03-16 17:24:25.233 +05:30 [INF] Executed action TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI) in 2107.1529ms
+2026-03-16 17:24:25.236 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.AuthController.Login (TaskFlowAPI)'
+2026-03-16 17:24:25.238 +05:30 [INF] Handled POST /api/Auth/login responded 200 in 2190.5887 ms
+2026-03-16 17:24:25.251 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5277/api/Auth/login - 200 null application/json; charset=utf-8 2209.3162ms
+2026-03-16 17:24:53.240 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/api/v1/Tasks?page=1&pageSize=5 - null null
+2026-03-16 17:24:53.298 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI)'
+2026-03-16 17:24:53.302 +05:30 [INF] Route matched with {action = "GetTasks", controller = "Tasks"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTasks(Int32, Int32) on controller TaskFlowAPI.Controllers.TasksController (TaskFlowAPI).
+2026-03-16 17:24:53.397 +05:30 [INF] Task cached with key : tasks_page_1_size_5
+2026-03-16 17:24:53.399 +05:30 [INF] Fetching tasks from database. Page: 1, PageSize: 5
+2026-03-16 17:24:53.491 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Tasks] AS [t]
+2026-03-16 17:24:53.499 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-03-16 17:24:53.501 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-03-16 17:24:53.513 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[IsCompleted], [t].[Title]
+FROM [Tasks] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-03-16 17:24:53.549 +05:30 [INF] Executing OkObjectResult, writing value of type 'TaskFlowAPI.Helpers.PagedResult`1[[TaskFlowAPI.DTOs.TaskResponseDTO, TaskFlowAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-16 17:24:53.563 +05:30 [INF] Executed action TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI) in 257.5221ms
+2026-03-16 17:24:53.566 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI)'
+2026-03-16 17:24:53.570 +05:30 [INF] Handled GET /api/v1/Tasks responded 200 in 323.6549 ms
+2026-03-16 17:24:53.573 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/api/v1/Tasks?page=1&pageSize=5 - 200 null application/json; charset=utf-8 333.0557ms
+2026-03-16 17:25:48.971 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5277/api/v1/Tasks?page=1&pageSize=5 - null null
+2026-03-16 17:25:48.980 +05:30 [INF] Executing endpoint 'TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI)'
+2026-03-16 17:25:48.981 +05:30 [INF] Route matched with {action = "GetTasks", controller = "Tasks"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTasks(Int32, Int32) on controller TaskFlowAPI.Controllers.TasksController (TaskFlowAPI).
+2026-03-16 17:25:48.987 +05:30 [INF] Task cached with key : tasks_page_1_size_5
+2026-03-16 17:25:48.989 +05:30 [INF] Fetching tasks from database. Page: 1, PageSize: 5
+2026-03-16 17:25:49.087 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Tasks] AS [t]
+2026-03-16 17:25:49.093 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[IsCompleted], [t].[Title]
+FROM [Tasks] AS [t]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-03-16 17:25:49.096 +05:30 [INF] Executing OkObjectResult, writing value of type 'TaskFlowAPI.Helpers.PagedResult`1[[TaskFlowAPI.DTOs.TaskResponseDTO, TaskFlowAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-16 17:25:49.098 +05:30 [INF] Executed action TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI) in 114.9659ms
+2026-03-16 17:25:49.100 +05:30 [INF] Executed endpoint 'TaskFlowAPI.Controllers.TasksController.GetTasks (TaskFlowAPI)'
+2026-03-16 17:25:49.102 +05:30 [INF] Handled GET /api/v1/Tasks responded 200 in 126.6857 ms
+2026-03-16 17:25:49.104 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5277/api/v1/Tasks?page=1&pageSize=5 - 200 null application/json; charset=utf-8 132.9669ms

@@ -12,6 +12,8 @@ using TaskFlowAPI.Mappings;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Serilog;
+using Asp.Versioning;
+
 
 
 Log.Logger=new LoggerConfiguration()
@@ -54,6 +56,13 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion=new ApiVersion(1,0);
+    options.AssumeDefaultVersionWhenUnspecified=true;
+    options.ReportApiVersions=true;
+    options.ApiVersionReader=new UrlSegmentApiVersionReader();
+});
 builder.Services.AddDbContext<AppDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService,TaskService>();   
@@ -61,6 +70,9 @@ builder.Services.AddScoped<JwtHelper>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+builder.Services.AddResponseCaching();
+builder.Services.AddMemoryCache();
+
 
 var jwtSection = builder.Configuration.GetSection("JwtSettings");
 var jwtkey=jwtSection["Key"]?? throw new Exception("JWT Key not found in configuration");
@@ -107,6 +119,7 @@ app.UseSwaggerUI();
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseResponseCaching();
 app.MapControllers();
 
 // Configure the HTTP request pipeline.

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "snE7MIDCL0s=",
+  "dgSpecHash": "OT7KBJzkGBo=",
   "success": true,
   "projectFilePath": "D:\\Rohith\\dotNetCore Projects\\TaskFlow\\TaskFlowAPI\\TaskFlowAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\BST - 1\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "C:\\Users\\BST - 1\\.nuget\\packages\\asp.versioning.http\\8.1.1\\asp.versioning.http.8.1.1.nupkg.sha512",
+    "C:\\Users\\BST - 1\\.nuget\\packages\\asp.versioning.mvc\\8.1.1\\asp.versioning.mvc.8.1.1.nupkg.sha512",
     "C:\\Users\\BST - 1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\BST - 1\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\BST - 1\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
