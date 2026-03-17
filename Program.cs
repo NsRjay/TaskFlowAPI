@@ -119,7 +119,7 @@ app.UseSwaggerUI();
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseResponseCaching();
+//app.UseResponseCaching();
 app.MapControllers();
 
 // Configure the HTTP request pipeline.

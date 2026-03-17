@@ -9,7 +9,7 @@ namespace TaskFlowAPI.Mappings
         {
             CreateMap<TaskItem,TaskResponseDTO>();
             CreateMap<TaskCreateDTO,TaskItem>();
-            
+            CreateMap<TaskUpdateDTO,TaskItem>();
         }
     }
 }

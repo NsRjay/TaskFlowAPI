@@ -22,7 +22,7 @@ namespace TaskFlowAPI.Controllers
             _taskService=taskService;
         }
         [HttpGet]
-        [ResponseCache(Duration=30)]
+        //[ResponseCache(Duration=30)]
         public IActionResult GetTasks(int page=1 ,int pageSize=5)
         {
             var tasks= _taskService.GetAllTasks(page,pageSize);
@@ -37,6 +37,19 @@ namespace TaskFlowAPI.Controllers
 
             return Ok(task);
 
+        }
+        [HttpPut("{id}")]
+        public IActionResult UpdateTask(int id,[FromBody]TaskUpdateDTO dto)
+        {
+
+            var updatedTask=_taskService.UpdateTask(id,dto);
+            return Ok(updatedTask);
+        }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteTask(int id)
+        {
+            _taskService.DeleteTask(id);
+            return Ok();
         }
        
     }

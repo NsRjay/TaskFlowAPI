@@ -9,6 +9,9 @@ namespace TaskFlowAPI.Repositories
             PagedResult<TaskItem> GetAllTasks(int page,int pageSize);
 
             TaskItem AddTask(TaskItem task);
+            TaskItem UpdateTask(TaskItem task);
+            TaskItem DeleteTask(TaskItem task);
+            TaskItem GetTaskById(int id);
         
     }
 }

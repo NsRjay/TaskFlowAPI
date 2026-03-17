@@ -2,6 +2,7 @@ using TaskFlowAPI.Data;
 using TaskFlowAPI.Models;
 using TaskFlowAPI.Helpers;
 using TaskFlowAPI.Repositories;
+using Microsoft.Identity.Client;
 
 namespace TaskFlowAPI.Repositories
 {
@@ -26,6 +27,39 @@ namespace TaskFlowAPI.Repositories
             _context.Tasks.Add(task);
             _context.SaveChanges();
             return task;
+        }
+        
+        public TaskItem UpdateTask(TaskItem task)
+        {
+            var existingtask=_context.Tasks.FirstOrDefault(t=>t.Id==task.Id);
+            if (existingtask==null)
+            {
+                throw new Exception ("Task not found");
+            }
+            //update task
+            existingtask.Title=task.Title;
+            existingtask.Description=task.Description;
+            existingtask.IsCompleted=task.IsCompleted;
+            _context.SaveChanges();
+            //  if task object is fully valid then you can use _context.tasks.Update(task);_context.SaveChanges();
+            
+            return existingtask;
+        }
+
+        public TaskItem DeleteTask(TaskItem task)
+        {   
+            var existingtask=_context.Tasks.FirstOrDefault(t=>t.Id==task.Id);
+            if(existingtask==null)
+            {
+                throw new Exception("Task not found");
+            }
+            _context.Tasks.Remove(existingtask);
+            _context.SaveChanges();
+            return existingtask;
+        }
+        public TaskItem GetTaskById(int id)
+        {
+            return _context.Tasks.FirstOrDefault(t=>t.Id==id);
         }
     }
 }
